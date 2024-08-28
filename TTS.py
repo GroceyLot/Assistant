@@ -12,6 +12,7 @@ def tts(text):
             voice="alloy",
             response_format="wav",
             input=text,
+            speed=1
         )
 
         # Convert MP3 to WAV using wave module
