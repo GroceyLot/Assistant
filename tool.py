@@ -3,7 +3,6 @@ import os
 import subprocess
 import datetime
 import time
-import requests
 import win32api
 import win32con
 import win32gui
@@ -13,7 +12,6 @@ import tempfile
 import base64
 from io import BytesIO
 from sound import playSound
-
 
 class Tools:
     def __init__(self, audioHandler, debug=False):
@@ -56,7 +54,7 @@ class Tools:
             },
             {
                 "name": "runCmd",
-                "description": "Run a command in cmd or powershell",
+                "description": "Run a command in cmd or powershell. This may not return anything, also be careful, as if you run 'notepad' it will not continue your tts until the user closes it, so instead run 'start notepad'",
                 "strict": true,
                 "parameters": {
                     "type": "object",
@@ -269,6 +267,8 @@ class Tools:
             "runAhkMacro": self.runAhkMacro,
             "getFocusedWindow": self.getFocusedWindow,
             "exitChat": self.exitChat,
+            "remember": self.remember,
+            "forget": self.forget,
         }
         self.audioHandler = audioHandler
 
