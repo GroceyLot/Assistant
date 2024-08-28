@@ -8,3 +8,4 @@ def playSound(filePath):
 
     # Play the sound and wait for it to finish
     sd.play(data, samplerate)
+    sd.wait()
