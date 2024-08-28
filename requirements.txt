@@ -1,0 +1,10 @@
+pywin32==306
+Pillow==9.1.1
+pyautogui==0.9.53
+openai==0.27.0
+numpy==1.24.2
+sounddevice==0.4.6
+soundfile==0.12.1
+pystray==0.20.0
+keyboard==0.13.5
+speechrecognition==3.9.0
