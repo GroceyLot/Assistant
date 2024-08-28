@@ -1,6 +1,5 @@
 import openai
 
-
 class Assistant:
     def __init__(
         self,
@@ -68,7 +67,7 @@ class Assistant:
                                 toolCall["id"] += toolId
                             if toolName is not None:
                                 toolCall["name"] += toolName
-
+                            
                             assistantCallbacks.toolDelta(**toolCall)
 
                     # Handle finish reasons
